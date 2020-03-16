@@ -22,6 +22,33 @@ namespace _2_8
             Console.WriteLine("请输入第二个数字或字符串：");
             b = Console.ReadLine();
         }
+        public void getmessage()
+        {
+            int d = 0;
+            if (int.TryParse(a, out d) && int.TryParse(b, out d))
+            {
+                e = int.Parse(a);
+                f = int.Parse(b);
+                jisuan();
+            }
+            else
+                Connection();
+
+        }
+        public void Connection()
+        {
+            string d;
+            if (c == "+")
+            {
+                d = a + b;
+                Console.WriteLine(a + c + b + '=' + d);
+            }
+            else if (c == "-")
+            {
+                d = a.Replace(b, "");
+                Console.WriteLine(a + c + b + '=' + d);
+            }
+        }
         public void jisuan()
         {
             float d;
